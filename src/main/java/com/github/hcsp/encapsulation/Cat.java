@@ -36,6 +36,6 @@ public class Cat {
     
     private Cat(String name, int age) {
         this.name = name;
-        thia.age = age;
+        this.age = age;
     }
 }
