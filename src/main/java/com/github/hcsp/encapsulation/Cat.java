@@ -18,7 +18,19 @@ public class Cat {
      * @param name 名字
      * @return 创建的猫
      */
-    public static Cat newCat(String name, int age) {}
+    public static Cat newCat(String name, int age) {
+        int validAge = 0;
+        
+        if (age < validAge || "".equals(name) || name == null) {
+            return INVALID_CAT;
+        }
+        return new Cat(name, age);
+    }
+
+    public Cat(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
