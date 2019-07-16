@@ -27,7 +27,7 @@ public class Cat {
         return new Cat(name, age);
     }
 
-    public Cat(String name, int age) {
+    private Cat(String name, int age) {
         this.name = name;
         this.age = age;
     }
