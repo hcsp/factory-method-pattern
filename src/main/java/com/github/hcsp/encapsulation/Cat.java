@@ -4,7 +4,7 @@ public class Cat {
     private static final Cat INVALID_CAT = new Cat("Invalid cat", -1);
     private String name;
     private int age;
-    public Cat(String name,int age){
+    private Cat(String name,int age){
        this.name=name;
        this.age=age;
     }
@@ -22,10 +22,13 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if (
-                (name == null || name.length()==0)||(age<0)){
+        if ((name == null || name.length()==0)||(age<0)){
             return INVALID_CAT;
         }
+ //        if (name == null || name==""){
+  //            return new Cat("Invalid cat",age);
+  //        }else if(age<0){
+  //          return new Cat(name,-1);}
         else {
               return new Cat(name,age);
              }
