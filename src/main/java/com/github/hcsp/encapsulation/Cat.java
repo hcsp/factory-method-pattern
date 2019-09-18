@@ -22,7 +22,7 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if (age<0 || name.equals("") || name == null) {
+        if (age<0 || name == null || name.equals("")) {
             return  INVALID_CAT;
         } else {
             return new Cat(name, age);
