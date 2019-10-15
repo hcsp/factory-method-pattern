@@ -14,14 +14,14 @@ public class Cat {
      *
      * <p>否则，返回一只新创建的猫
      *
-     * @param age  年龄
+     * @param age 年龄
      * @param name 名字
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if (age < 0.2 || (name == null || name.isEmpty())) {
+        if (age < 0.2 || name == null || name.isEmpty()) {
             return INVALID_CAT;
-        } else {
+        }else {
             return new Cat();
         }
     }
@@ -33,11 +33,9 @@ public class Cat {
     public int getAge() {
         return age;
     }
-
-    private Cat() {
+    private Cat (){
 
     }
-
     private Cat(String name, int age) {
         this.name = name;
         this.age = age;
