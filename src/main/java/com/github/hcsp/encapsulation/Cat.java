@@ -22,7 +22,7 @@ public class Cat {
         if (age < 0 || name == null || name.isEmpty()) {
             return INVALID_CAT;
         }else {
-            return new Cat();
+            return new Cat(name,age);
         }
     }
 
