@@ -21,7 +21,7 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if(age<0.2 || Objects.equals(name,null) || "".equals(name)){
+        if(age<0 || Objects.equals(name,null) || "".equals(name)){
             return INVALID_CAT;
         }
         return new Cat(name,age);
