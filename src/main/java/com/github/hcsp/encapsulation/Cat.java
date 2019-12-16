@@ -39,8 +39,6 @@ public class Cat {
         return new Cat(name,age);
     }
 
-    public static Cat newCat(String name, int age) {}
-
     public String getName() {
         return name;
     }
