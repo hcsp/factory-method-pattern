@@ -24,10 +24,10 @@ public class Cat {
     }
 
     public static Cat newCat(String name, int age) {
-        if(age < 0 || null == name || name == "") {
+        if(age < 0 || null == name || name.equals("")) {
             return INVALID_CAT;
         } else {
-            return newCat(name, age);
+            return new Cat(name, age);
         }
     }
 
