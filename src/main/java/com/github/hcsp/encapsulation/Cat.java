@@ -18,7 +18,7 @@ public class Cat {
      * @param name 名字
      * @return 创建的猫
      */
-    public Cat(String name, int age) {
+    private Cat(String name, int age) {
         this.name = name;
         this.age = age;
     }
