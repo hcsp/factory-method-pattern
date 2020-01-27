@@ -19,13 +19,14 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if (age < 0 || "".equals(name) ||  null == name) {
+        if(age < 0 || "".equals(name) || null == name){
             return INVALID_CAT;
         }
-        return new Cat(name, age);
+        return new Cat(name,age);
     }
 
-    public Cat(String name, int age) {
+
+    private Cat(String name, int age) {
         this.name = name;
         this.age = age;
     }
