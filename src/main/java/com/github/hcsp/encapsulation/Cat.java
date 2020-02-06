@@ -5,8 +5,7 @@ public class Cat {
     private String name;
     private int age;
 
-    public Cat(String invalid_cat, int i) {
-    }
+
 
     /**
      * 创建一只猫的工厂方法。当传入的参数无效，即：
@@ -37,4 +36,8 @@ public class Cat {
         return age;
     }
 
+    private Cat(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }
