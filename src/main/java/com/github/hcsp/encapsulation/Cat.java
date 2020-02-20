@@ -1,10 +1,16 @@
 package com.github.hcsp.encapsulation;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Cat {
     private static final Cat INVALID_CAT = new Cat("Invalid cat", -1);
     private String name;
     private int age;
 
+    private Cat(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     /**
      * 创建一只猫的工厂方法。当传入的参数无效，即：
@@ -15,20 +21,15 @@ public class Cat {
      *
      * <p>否则，返回一只新创建的猫
      *
-     * @param age  年龄
+     * @param age 年龄
      * @param name 名字
      * @return 创建的猫
      */
-
-    private Cat(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
     public static Cat newCat(String name, int age) {
-        if (age < 0 || name == null || name.equals("")) {
+        if (StringUtils.isEmpty(name) || age < 0) {
             return INVALID_CAT;
         }
+        
         return new Cat(name, age);
     }
 
