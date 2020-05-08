@@ -1,7 +1,7 @@
 package com.github.hcsp.encapsulation;
 
 public class Cat {
-    private static final Cat INVALID_CAT = new Cat("Invalid",-1);
+    private static final Cat INVALID_CAT = new Cat("Invalid cat",-1);
     private String name;
     private int age;
 
