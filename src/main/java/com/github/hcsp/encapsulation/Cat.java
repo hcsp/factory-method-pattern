@@ -24,13 +24,14 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-    if (age < 0 || name == null || name.equals("")) {
+    if (age < 0 || name == null || name.isEmpty()) {
         return INVALID_CAT;
     } else {
         return newCat(name, age);
     }
 
-    }
+        }
+
 
     public String getName() {
 
