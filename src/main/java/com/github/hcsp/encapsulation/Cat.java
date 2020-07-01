@@ -25,11 +25,10 @@ public class Cat {
      */
 
     public static Cat newCat(String name, int age) {
-        if ("".equals(name) || name == null || age < 0 ) {
+        if ("".equals(name) || name == null || age < 0) {
             return INVALID_CAT;
         }
-        return new Cat(name,age);
-
+        return new Cat(name, age);
     }
 
     public String getName() {
