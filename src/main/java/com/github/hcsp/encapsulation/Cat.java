@@ -20,7 +20,7 @@ public class Cat {
      */
     // public static Cat newCat(String name, int age) {}
     public static Cat newCat(String name, int age) {
-        if (age < 0 || name.isEmpty() || "null".equals(name)) {
+        if (age < 0 || name == null || "".equals(name)) {
             return INVALID_CAT;
         } else {
             return newCat(name, age);
