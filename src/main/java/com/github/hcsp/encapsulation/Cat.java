@@ -19,9 +19,9 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if (age<0 || name.isEmpty()||name == null){
+        if ( age<0 || name.isEmpty() || name == null) {
             return INVALID_CAT;
-        }else {
+        } else {
             return newCat(name,age);
         }
     }
