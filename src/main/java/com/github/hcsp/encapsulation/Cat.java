@@ -28,9 +28,7 @@ public class Cat {
             return INVALID_CAT;
         }
         //之前代码错误原因：name==null写在了后面了，而当name为Null时，null.equals()方法都没有，所以报了空指针异常
-
         return new Cat(name, age);
-
     }
 
     private Cat(String name, int age) {
