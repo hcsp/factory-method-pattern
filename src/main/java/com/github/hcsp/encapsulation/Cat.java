@@ -5,11 +5,6 @@ public class Cat {
     private String name;
     private int age;
 
-    public Cat(String name, int age) {
-        this.age = age;
-        this.name = name;
-    }
-
     /**
      * 创建一只猫的工厂方法。当传入的参数无效，即：
      *
@@ -24,11 +19,17 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if (name == null || name.isEmpty() || age < 0) {
+        if (name == null || "".equals(name) || age < 0) {
             return INVALID_CAT;
         }
         return new Cat(name, age);
     }
+
+    private Cat(String name, int age) {
+        this.age = age;
+        this.name = name;
+    }
+
 
     public String getName() {
         return name;
