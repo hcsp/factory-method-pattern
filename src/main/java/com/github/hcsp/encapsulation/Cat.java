@@ -22,7 +22,7 @@ public class Cat {
         this.name = name;this.age = age;
     }
     public static Cat newCat(String name, int age) {
-        if(age < 0||name == null || name == "") return INVALID_CAT;
+        if(age < 0||name == null || name.equals("")) return INVALID_CAT;
         else return new Cat(name,age);
     }
 
