@@ -1,5 +1,7 @@
 package com.github.hcsp.encapsulation;
 
+import java.util.Objects;
+
 public class Cat {
     private static final Cat INVALID_CAT = new Cat("Invalid cat", -1);
     private String name;
@@ -23,12 +25,13 @@ public class Cat {
             return INVALID_CAT;
         } else if (name == null) {
             return INVALID_CAT;
-        } else {
-            return new Cat(name, age);
+        } else if ("".equals(name)) {
+            return INVALID_CAT;
         }
+        return new Cat(name, age);
     }
 
-    private Cat(String name, int age){
+    private Cat(String name, int age) {
         this.name = name;
         this.age = age;
     }
