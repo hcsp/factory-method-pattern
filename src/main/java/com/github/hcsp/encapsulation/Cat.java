@@ -24,8 +24,13 @@ public class Cat {
         } else if (name == null) {
             return INVALID_CAT;
         } else {
-            return newCat(name, age);
+            return new Cat(name, age);
         }
+    }
+
+    private Cat(String name, int age){
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
