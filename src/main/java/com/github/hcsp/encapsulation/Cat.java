@@ -19,16 +19,16 @@ public class Cat {
      * @return 创建的猫
      */
     public static Cat newCat(String name, int age) {
-        if (age < 0 || name == null || "".equals(name)) {
-            return Cat.INVALID_CAT;
+        if (age < 0 || name == null || name.isEmpty()) {
+            return INVALID_CAT;
         }
         return new Cat(name, age);
     }
 
-    public Cat() {
+    private Cat() {
     }
 
-    public Cat(String name, Integer age) {
+    private Cat(String name, int age) {
         this.name = name;
         this.age = age;
     }
