@@ -18,13 +18,33 @@ public class Cat {
      * @param name 名字
      * @return 创建的猫
      */
-    public static Cat newCat(String name, int age) {}
+    private Cat (String name,int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public static Cat newCat(String name, int age) {
+        if(name == null || age < 0) {
+            return INVALID_CAT;
+        }else{
+            return  new Cat(name,age);
+        }
+
+    }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getAge() {
         return age;
     }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
 }
