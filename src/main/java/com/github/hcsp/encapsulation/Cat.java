@@ -1,5 +1,5 @@
 package com.github.hcsp.encapsulation;
-
+import java.util.Objects;
 public class Cat {
     private static final Cat INVALID_CAT = new Cat("Invalid cat", -1);
     private String name;
@@ -18,7 +18,16 @@ public class Cat {
      * @param name 名字
      * @return 创建的猫
      */
-    public static Cat newCat(String name, int age) {}
+    public Cat(String name,int age){
+        this.name = name;
+        this.age = age;
+    }
+    public static Cat newCat(String name, int age) {
+        if(age<0||name==null||Objects.equals(name, "")){
+            return INVALID_CAT;
+        }
+        return newCat(name, age);
+    }
 
     public String getName() {
         return name;
