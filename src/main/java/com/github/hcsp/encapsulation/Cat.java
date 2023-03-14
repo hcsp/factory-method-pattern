@@ -1,16 +1,9 @@
 package com.github.hcsp.encapsulation;
 
-import java.util.Objects;
-
 public class Cat {
     private static final Cat INVALID_CAT = new Cat("Invalid cat", -1);
-    private final String name;
-    private final int age;
-
-    private Cat(String name, int age) {
-        this.age = age;
-        this.name = name;
-    }
+    private String name;
+    private int age;
 
     /**
      * 创建一只猫的工厂方法。当传入的参数无效，即：
@@ -25,12 +18,7 @@ public class Cat {
      * @param name 名字
      * @return 创建的猫
      */
-    public static Cat newCat(String name, int age) {
-        if (age < 0 || Objects.equals(name, "") || name == null) {
-            return INVALID_CAT;
-        }
-        return new Cat(name, age);
-    }
+    public static Cat newCat(String name, int age) {}
 
     public String getName() {
         return name;
